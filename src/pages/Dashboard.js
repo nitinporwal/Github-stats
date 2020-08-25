@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Navbar, Search, User, Info, Repos } from '../components';
+import { Navbar, Search, User, Repos, UserInfo } from '../components';
 
 class Dashboard extends Component {
     render() {
@@ -7,7 +7,7 @@ class Dashboard extends Component {
             <div>
                 <Navbar />
                 <Search />
-                <Info />
+                <UserInfo />
                 <User />
                 <Repos />
             </div>
