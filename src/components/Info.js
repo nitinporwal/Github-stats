@@ -1,13 +1,14 @@
-import React, { Component } from 'react'
+import React from 'react';
+import { GithubContext } from '../context/context';
 
-class Info extends Component {
-    render() {
-        return (
-            <div>
-                Info component
-            </div>
-        )
-    }
+const Info = () => {
+    const data = React.useContext(GithubContext);
+    console.log(data);
+    return (
+        <h2>
+            User Info component
+        </h2>
+    )
 }
 
 export default Info;

@@ -3,9 +3,9 @@ import React, { Component } from 'react'
 class User extends Component {
     render() {
         return (
-            <div>
+            <h2>
                 User component
-            </div>
+            </h2>
         )
     }
 }

@@ -3,9 +3,9 @@ import React, { Component } from 'react'
 class Search extends Component {
     render() {
         return (
-            <div>
+            <h2>
                 Search component
-            </div>
+            </h2>
         )
     }
 }
