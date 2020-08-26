@@ -5,8 +5,8 @@ class Dashboard extends Component {
     render() {
         return (
             <div>
-                <Navbar />
-                <Search />
+                {/* <Navbar />
+                <Search /> */}
                 <UserInfo />
                 <User />
                 <Repos />
