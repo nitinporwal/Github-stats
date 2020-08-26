@@ -1,9 +1,13 @@
 import React, { Component, useContext } from 'react';
 import Cards from './Cards';
+import Followers from './Followers';
 
 const User = () => {
     return (
-        <Cards />
+        <div>
+            <Cards />
+            <Followers />
+        </div>
     )
 }
 
