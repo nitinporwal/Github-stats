@@ -1,13 +1,10 @@
-import React, { Component } from 'react'
+import React, { Component, useContext } from 'react';
+import Cards from './Cards';
 
-class User extends Component {
-    render() {
-        return (
-            <h2>
-                User component
-            </h2>
-        )
-    }
+const User = () => {
+    return (
+        <Cards />
+    )
 }
 
 export default User;
