@@ -4,9 +4,9 @@ import FusionCharts from "fusioncharts";
 import Chart from "fusioncharts/fusioncharts.charts";
 import FusionTheme from "fusioncharts/themes/fusioncharts.theme.fusion";
 ReactFC.fcRoot(FusionCharts, Chart, FusionTheme);
-const ChartComponent = ({data}) => {
+const ExampleChart = ({data}) => {
     const chartConfigs = {
-        type: "column2d",
+        type: "pie3d",
         width: "400",
         height: "400",
         dataFormat: "json",
@@ -25,4 +25,4 @@ const ChartComponent = ({data}) => {
     return (<ReactFC {...chartConfigs} />);
 }
 
-export default ChartComponent;
+export default ExampleChart;
