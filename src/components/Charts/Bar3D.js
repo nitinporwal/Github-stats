@@ -2,7 +2,7 @@ import React from "react";
 import ReactFC from "react-fusioncharts";
 import FusionCharts from "fusioncharts";
 import Chart from "fusioncharts/fusioncharts.charts";
-import FusionTheme from "fusioncharts/themes/fusioncharts.theme.fusion";
+import FusionTheme from "fusioncharts/themes/fusioncharts.theme.ocean";
 ReactFC.fcRoot(FusionCharts, Chart, FusionTheme);
 const Bar3D = ({data}) => {
     const chartConfigs = {
@@ -13,7 +13,7 @@ const Bar3D = ({data}) => {
         dataSource: {
             chart: {
                 caption: "Languages",
-                theme: "fusion",
+                theme: "ocean",
                 // showLegend: 1,
                 // bgColor: "#FFFF00",
                 // bgAlpha: 10,
@@ -24,8 +24,7 @@ const Bar3D = ({data}) => {
                 animation: 1,
                 animationDuration: 2,
                 alphaAnimation: 0,
-                animateClockwise: 0,
-                showPercentInToolTip: 1
+                animateClockwise: 0
             },
             data
         }
