@@ -18,7 +18,6 @@ const Repos = () => {
             value: "80"
         }
     ];
-    // console.log(repos);
     let languages = repos.reduce((total, repo) => {
         const { language, stargazers_count } = repo;
         if (!language) {
@@ -35,11 +34,19 @@ const Repos = () => {
     languages = Object.values(languages).sort((a, b) => {
         return b.value - a.value;
     }).slice(0, 5);
+
+
+    let most_popular = Object.values(languages).sort((a, b) => {
+        return b.stars - a.stars;
+    }).map((star, index) => {
+        return { ...star, value: star.stars }
+    }).slice(0, 5);
+
     return (
         <section>
             <Pie3D data={languages} />
             <Column3D data={languages} />
-            <Doughnut2D data={languages} />
+            <Doughnut2D data={most_popular} />
             <Bar3D data={languages} />
         </section>
     )

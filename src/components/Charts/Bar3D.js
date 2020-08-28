@@ -12,7 +12,11 @@ const Bar3D = ({data}) => {
         dataFormat: "json",
         dataSource: {
             chart: {
-                caption: "Languages",
+                caption: "Most Forked",
+                xAxisName: "Forks",
+                yAxisName: "Rtars",
+                xAxisNameFontSize: "16px",
+                yAxisNameFontSize: "16px",
                 theme: "ocean",
                 // showLegend: 1,
                 // bgColor: "#FFFF00",

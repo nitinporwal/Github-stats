@@ -12,7 +12,7 @@ const Doughnut2D = ({data}) => {
         dataFormat: "json",
         dataSource: {
             chart: {
-                caption: "Languages",
+                caption: "Stars Per Language",
                 theme: "candy",
                 // showLegend: 1,
                 // bgColor: "#FFFF00",
