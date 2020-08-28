@@ -4,20 +4,7 @@ import { ExampleChart, Pie3D, Column3D, Doughnut2D, Bar3D } from './Charts';
 
 const Repos = () => {
     const { repos } = useContext(GithubContext);
-    const chartData = [
-        {
-            label: "HTML",
-            value: "13"
-        },
-        {
-            label: "CSS",
-            value: "28"
-        },
-        {
-            label: "Javascript",
-            value: "80"
-        }
-    ];
+    
     let languages = repos.reduce((total, repo) => {
         const { language, stargazers_count } = repo;
         if (!language) {
@@ -42,12 +29,28 @@ const Repos = () => {
         return { ...star, value: star.stars }
     }).slice(0, 5);
 
+    let { stars, forks } = repos.reduce((total, repo) => {
+        const { name, stargazers_count, forks_count } = repo;
+        total.stars[stargazers_count] = {
+            label: name,
+            value: stargazers_count
+        }
+        total.forks[forks_count] = {
+            label: name,
+            value: forks_count
+        }
+        return total;
+    }, { stars: {}, forks: {} });
+    stars=Object.values(stars).slice(-5).reverse();
+    forks=Object.values(forks).slice(-5).reverse();
+
+
     return (
         <section>
             <Pie3D data={languages} />
-            <Column3D data={languages} />
+            <Column3D data={stars} />
             <Doughnut2D data={most_popular} />
-            <Bar3D data={languages} />
+            <Bar3D data={forks} />
         </section>
     )
 }
