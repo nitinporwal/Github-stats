@@ -7,9 +7,9 @@ class Dashboard extends Component {
             <div>
                 {/* <Navbar /> */}
                 <Search />
-                {/* <UserInfo />
+                <UserInfo />
                 <User />
-                <Repos /> */}
+                <Repos />
             </div>
         )
     }

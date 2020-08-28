@@ -5,13 +5,17 @@ import { GithubContext } from '../context/context';
 
 
 const Search = () => {
-    const {request} = useContext(GithubContext);
+    const { request, error, searchGithubUser } = useContext(GithubContext);
     const [user, setUser] = useState('')
     const handelSubmit = (e) => {
         e.preventDefault();
+        searchGithubUser(user);
     }
     return (
         <section>
+            {error.show &&
+                <p>{error.msg}</p>
+            }
             <form onSubmit={(e) => handelSubmit(e)}>
                 <div>
                     <MdSearch />
