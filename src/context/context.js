@@ -26,6 +26,7 @@ const GithubProvider = ({ children }) => {
     }
     const searchGithubUser = async (user) => {
         toggleError();
+        setIsLoading(true);
         console.log(user);
         const response = await axios(`${rootUrl}/users/${user}`)
             .catch(err => console.log(err));
@@ -44,6 +45,8 @@ const GithubProvider = ({ children }) => {
         } else {
             toggleError(true, "there is no user with that username");
         }
+        fetchRequests();
+        setIsLoading(false);
     }
     const toggleError = (show = false, msg = "") => {
         setError({ show, msg });

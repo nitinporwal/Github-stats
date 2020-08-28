@@ -14,7 +14,7 @@ const Bar3D = ({data}) => {
             chart: {
                 caption: "Most Forked",
                 xAxisName: "Forks",
-                yAxisName: "Rtars",
+                yAxisName: "Stars",
                 xAxisNameFontSize: "16px",
                 yAxisNameFontSize: "16px",
                 theme: "ocean",

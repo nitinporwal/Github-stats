@@ -14,7 +14,7 @@ const Column3D = ({data}) => {
             chart: {
                 caption: "Most Popular",
                 xAxisName: "Repos",
-                yAxisName: "Rtars",
+                yAxisName: "Stars",
                 xAxisNameFontSize: "16px",
                 yAxisNameFontSize: "16px",
                 theme: "ocean",
