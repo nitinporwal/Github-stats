@@ -1,13 +1,27 @@
-import React, { Component } from 'react'
+import React, { useState, useContext } from 'react';
+import { MdSearch } from 'react-icons/md';
+import { GithubContext } from '../context/context';
 
-class Search extends Component {
-    render() {
-        return (
-            <h2>
-                Search component
-            </h2>
-        )
+
+
+const Search = () => {
+    const {request} = useContext(GithubContext);
+    const [user, setUser] = useState('')
+    const handelSubmit = (e) => {
+        e.preventDefault();
     }
+    return (
+        <section>
+            <form onSubmit={(e) => handelSubmit(e)}>
+                <div>
+                    <MdSearch />
+                    <input type="text" value={user} placeholder="enter github username" onChange={(e) => setUser(e.target.value)} />
+                    <button type="submit">search</button>
+                </div>
+            </form>
+            <h3>Requests : {request}/60</h3>
+        </section>
+    )
 }
 
 export default Search;

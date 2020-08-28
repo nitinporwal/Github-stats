@@ -5,11 +5,11 @@ class Dashboard extends Component {
     render() {
         return (
             <div>
-                {/* <Navbar />
-                <Search /> */}
-                <UserInfo />
+                {/* <Navbar /> */}
+                <Search />
+                {/* <UserInfo />
                 <User />
-                <Repos />
+                <Repos /> */}
             </div>
         )
     }
