@@ -5,7 +5,7 @@ import loadingGif from '../images/preloader.gif';
 const AuthWrapper = ({children}) => {
     const {isLoading, error} = useAuth0();
     if(isLoading) {
-        return <img src={loadingGif} alt="spinner"/>
+        return <img src={loadingGif} alt="spinner" className="loading-img"/>
     }
     if(error) {
         return <h1>{error.message}</h1> 

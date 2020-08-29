@@ -4,7 +4,7 @@ import FusionCharts from "fusioncharts";
 import Chart from "fusioncharts/fusioncharts.charts";
 import FusionTheme from "fusioncharts/themes/fusioncharts.theme.ocean";
 ReactFC.fcRoot(FusionCharts, Chart, FusionTheme);
-const Bar3D = ({data}) => {
+const Bar3D = ({ data }) => {
     const chartConfigs = {
         type: "bar3d",
         width: "100%",
@@ -18,17 +18,28 @@ const Bar3D = ({data}) => {
                 xAxisNameFontSize: "16px",
                 yAxisNameFontSize: "16px",
                 theme: "ocean",
-                // showLegend: 1,
-                // bgColor: "#FFFF00",
-                // bgAlpha: 10,
-                // showBorder: 1,
-                // enableSmartLabels: "0",
-                // startingAngle: "0",
-                useDataPlotColorForLabels: "1",
-                animation: 1,
-                animationDuration: 2,
-                alphaAnimation: 0,
-                animateClockwise: 0
+                xAxisNameFontSize: 16,
+                yAxisNameFontSize: 16,
+                showCanvasBorder: 0,
+                showAlternateVGridColor: 0,
+                usePlotGradientColor: 0,
+                valueFontSize: 16,
+                placeValuesInside: 0,
+                divLineColor: "#102a42",
+                divLineAlpha: 15,
+                captionFontColor: "#102a42",
+                captionFontBold: 0,
+                captionFontSize: 20,
+                captionFont: "Roboto",
+                baseFont: "Open Sans",
+                baseFontSize: 12,
+                baseFontColor: "#617d98",
+                smartLineColor: "#617d98",
+                showShadow: 0,
+                showPlotBorder: 0,
+                paletteColors: "#2caeba, #5D62B5, #FFC533, #F2726F, #8d6e63, #1de9b6, #6E80CA",
+                bgColor: "#FFFFFF",
+                showBorder: 0,
             },
             data
         }

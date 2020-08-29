@@ -1,8 +1,6 @@
 import React from 'react';
-import { Dashboard, Login, Error } from './pages';
+import { Dashboard, Login, Error, AuthWrapper, PrivateRoute } from './pages';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import PrivateRoute from './pages/PrivateRoute';
-import AuthWrapper from './pages/AuthWrapper';
 
 function App() {
   return (

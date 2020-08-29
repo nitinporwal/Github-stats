@@ -9,15 +9,15 @@ const Dashboard = () => {
         return <main>
             <Navbar />
             <Search />
-            <img src={LoaderImg} alt="Loading....." />
+            <img src={LoaderImg} alt="Loading....." className="loading-img" />
         </main>
     }
     return (
         <div>
             <Navbar />
             <Search />
-            {/* <UserInfo />
-            <User /> */}
+            <UserInfo />
+            <User />
             <Repos />
         </div>
     )
